@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/xml; charset=UTF-8" />
+<title>Test images variables avec Javascript</title>
+
+<script>
+function changephoto(form)
+{
+	var nomphoto=form.rubriques.value;
+	document.getElementById("photo").setAttribute("src",nomphoto);
+}
+</script>
+
+</head>
+<body>
+	<form action="">
+		<fieldset>
+			<select name="rubriques" onChange='changephoto(this.form)'>
+				<option>-- Choisissez une rubrique ---</option>
+				<option value="fleur.jpg">fleurs</option>
+				<option value="insecte.jpg">insectes</option>
+				<option value="arbre.jpg">arbres</option>
+			</select>
+		</fieldset>
+		<img id="photo" src="" alt="photo"  height="200" width="200"/>
+	</form>
+</body>
+</html>
